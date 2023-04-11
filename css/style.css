@@ -1,0 +1,708 @@
+:root {
+  --modal-duration: 1s;
+  --modal-color: #9b9b9b;
+}
+
+/* ---Start Custom--- */
+
+/* Start Font */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  margin: 32px 0;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0a0a0a;
+}
+
+h2 {
+  margin: 16px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+
+h3 {
+  margin: 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #0a0a0a;
+}
+
+.card-heading {
+  margin: 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #606060;
+}
+/* End Font */
+
+/* Start Font Color */
+.font-color1 {
+  color: #9b9b9b;
+}
+
+.font-color2 {
+  color: #606060;
+}
+
+.font-color3 {
+  color: #0a0a0a !important;
+}
+/* End Font Color */
+
+/* Start Background Color */
+.bg-color1 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bg-color2 {
+  background-color: #faad01;
+}
+
+.bg-color3 {
+  background-color: #0a0a0a;
+  padding: 60px 0;
+}
+/* End Background Color */
+
+/* Start Shadow Hover */
+.shadow-hover:hover {
+  box-shadow: 0px 2px 20px 0 #9b9b9b;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* End Shadow Hover */
+
+/* Start Buttons */
+.basic-btn {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 10px 25px;
+  border: 2px solid #faad01;
+}
+
+.custom-btn {
+  padding: 1px 12px;
+}
+
+.border-btn {
+  border-radius: 6px;
+}
+
+.btn-bg-color {
+  background-color: #faad01 !important;
+  color: #0a0a0a;
+}
+
+.btn-hover1:hover {
+  background-color: #ffffff !important;
+  color: #9b9b9b;
+}
+
+.btn-hover2:hover {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.btn-hover3:hover {
+  background-color: #faad01 !important;
+  text-decoration: none;
+}
+/* End Buttons */
+
+/* Start Headings */
+.heading-padding {
+  padding: 210px 0 105px 0;
+}
+
+.center-underline {
+  width: 100px;
+  height: 3px;
+  background-color: #faad01;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* End Headings */
+
+/* Start Hide & Show Content */
+.desktop-hide {
+  display: none;
+}
+/* End Hide & Show Content */
+
+/* Start go to shop */
+.icon-card {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+/* End go to shop */
+
+/* ---End Custom--- */
+
+/* ---Start Navbar--- */
+.mobile-navbar {
+  display: flex;
+  justify-content: end;
+}
+/* ---End Navbar--- */
+
+/* Start Modal */
+.btn-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 20% auto;
+  width: 80%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* End Modal */
+
+/* Start Register Form */
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+/* End Register Form */
+
+/* Start Login Form */
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: var(--modal-color);
+  border-radius: 5px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-wrapper > form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-wrapper > h1 {
+  margin: 8px 0;
+}
+
+.login-btn {
+  margin-top: 16px;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.login-btn:hover {
+  background-color: var(--modal-color);
+  border: 2px solid #f1f1f1;
+}
+
+.register-btn {
+  margin-top: 16px;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.register-btn:hover {
+  background-color: var(--modal-color);
+  border: 2px solid #f1f1f1;
+}
+
+/* End Login Form */
+
+/* Start Icon Card Number */
+#cardItemsNumber {
+  background-color: red;
+  margin: 9px;
+  padding: 2px;
+  border-radius: 50%;
+}
+/* End Icon Card Number */
+
+/* Start Login, Register, Icon Card Close */
+.card-close,
+.login-close,
+.register-close {
+  cursor: pointer;
+}
+/* End Login, Register, Icon Card Close */
+
+/* Start card */
+#iconCard {
+  cursor: pointer;
+}
+/* End card */
+
+/* ---Start Hero--- */
+.hero {
+  background-image: url("../img/Pictures/Backgrounds/Hero-image-Background.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  padding-top: 280px;
+}
+
+.hero-text-color {
+  color: #faad01;
+}
+
+.hero-paragraph-width {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hero-play-icon {
+  color: #faad01;
+}
+
+.hero-play-icon:hover {
+  color: #ffffff;
+}
+/* ---End Hero--- */
+
+/* ---Start Event Speakers--- */
+
+/* Start Speakres */
+.speakers-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 360px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.speaker1 {
+  background-image: url("../img/Pictures/Lecturers/Biljana-Vidojevikj.png");
+}
+
+.speaker2 {
+  background-image: url("../img/Pictures/Lecturers/Димитар-2.jpg");
+}
+
+.speaker3 {
+  background-image: url("../img/Pictures/Lecturers/Miroslav.jpg");
+}
+
+.speaker4 {
+  background-image: url("../img/Pictures/Lecturers/alexander-stoicoff-adivius.png");
+}
+
+.speaker5 {
+  background-image: url("../img/Pictures/Lecturers/Filip-DImitrov.png");
+}
+
+.speaker6 {
+  background-image: url("../img/Pictures/Lecturers/MAJA.jpg");
+}
+
+.speaker-text {
+  position: relative;
+  top: 279px;
+}
+
+.hover:hover .speaker-text {
+  top: 233px;
+}
+
+.media-icons {
+  display: none;
+}
+
+.hover:hover .speaker-text .media-icons {
+  display: block;
+}
+/* End Speakres */
+
+/* ---End Event Speakers--- */
+
+/* ---Start Schedule--- */
+
+/* Strat Registration */
+.registrations-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.modal-registration-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+/* End Registration */
+
+/* ---End Schedule--- */
+
+/* ---Start Venue--- */
+
+/* Start Venue Background Images */
+.venue-bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+}
+
+.venue-img1 {
+  background-image: url("../img/Pictures/Backgrounds/Map.png");
+}
+
+.venue-img2 {
+  background-image: url("../img/Pictures/Backgrounds/Venue-information-background.png");
+}
+
+.venue-img3 {
+  background-image: url("../img/Pictures/Events-pictures-for-carousel/trajko-dzikov.jpg");
+}
+
+.venue-img4 {
+  background-image: url("../img/Pictures/Events-pictures-for-carousel/marketing-strategy.jpg");
+}
+
+.venue-img5 {
+  background-image: url("../img/Pictures/Events-pictures-for-carousel/pr-kosta-petrov.jpg");
+}
+
+.venue-img6 {
+  background-image: url("../img/Pictures/Events-pictures-for-carousel/marketing-macedonia.jpg");
+}
+/* End Venue Background Images */
+
+/* ---End Venue--- */
+
+/* ---Start Gallery--- */
+.gallery-img {
+  width: 100%;
+  height: 500px;
+}
+
+.left-arrow {
+  top: auto;
+  bottom: -60px;
+  left: 42%;
+  width: 5%;
+  opacity: 1;
+}
+
+.right-arrow {
+  top: auto;
+  bottom: -60px;
+  right: 42%;
+  width: 5%;
+  opacity: 1;
+}
+/* ---End Gallery--- */
+
+/* ---Start Sponsors--- */
+.company-logo {
+  padding-left: 80px;
+}
+/* ---End Sponsors--- */
+
+/* ---Start F.A.Q--- */
+.faq-bg-text {
+  background: #ffffff;
+}
+/* ---End F.A.Q--- */
+
+/* ---Start Hero Newsletter--- */
+.newsletter-img {
+  background-image: url("../img/Pictures/Backgrounds/Newsletter-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  margin: 210px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ---End Hero Newsletter--- */
+
+/* ---Start Tickets--- */
+.margin {
+  margin-left: 0;
+}
+
+.card-padding {
+  padding: 20px 20px;
+}
+
+.price-padding {
+  padding: 50px 0;
+}
+.form-contact-padding {
+  padding: 105px 0 210px 0;
+}
+/* ---End Tickets--- */
+
+/* ---Start Contact--- */
+.contact-modal-padding {
+  padding: 210px 0;
+}
+
+.contact-border {
+  border-right: #0a0a0a 1px solid;
+}
+/* ---End Contact--- */
+
+/* ---Start Footer--- */
+
+/* Start Up Icon */
+.position {
+  position: relative;
+}
+
+.icon-position {
+  position: absolute;
+  top: -135px;
+  right: 50%;
+}
+/* End Up Icon */
+
+/* Strat Creative Hub */
+.fotter-img-logo {
+  margin: 24px 0;
+}
+/* End Creative Hub */
+
+/* Start Copyright */
+.footer-text {
+  text-align: center;
+}
+/* End Copyright */
+
+/* ---End Footer--- */
+
+/* ---RESPONSIVE--- */
+/* Start Mobile */
+@media screen and (max-width: 426px) {
+  /* ---Start Custom--- */
+
+  /* Start Font */
+  h1 {
+    margin: 24px 0;
+    font-size: 24px;
+  }
+
+  h2 {
+    margin: 16px 0;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .card-heading {
+    font-size: 18px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+  /* End Font */
+
+  /* Start Headings */
+  .heading-padding {
+    padding: 90px 0 45px 0;
+  }
+  /* End Headings */
+
+  /* Start Hide & Show Content */
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-show {
+    display: block;
+  }
+  /* End Hide & Show Content */
+
+  /* ---End Custom--- */
+
+  /* ---Start Navbar--- */
+  .mobile-navbar {
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+  }
+  /* End Navbar */
+
+  /* ---Start Event Speakers--- */
+
+  /* Start Speakers */
+  .speaker-text {
+    top: 300px;
+  }
+
+  .hover:hover .speaker-text {
+    top: 253px;
+  }
+  /* End Speakers */
+
+  /* ---End Event Speakers */
+
+  /* ---Start Gallery--- */
+
+  /* Start Carousel Image */
+  .gallery-img {
+    height: 400px;
+  }
+
+  .left-arrow {
+    left: 40%;
+  }
+
+  .right-arrow {
+    right: 40%;
+  }
+  /* End Carousel Image */
+
+  /* ---End Gallery--- */
+
+  /* ---Start Sponsors--- */
+  .company-logo {
+    padding-left: 0;
+  }
+  /* ---End Sponsors--- */
+
+  /* ---Start Contact--- */
+
+  /* Start Email Contact */
+  .contact-border {
+    border-right: none;
+    border-bottom: #0a0a0a 1px solid;
+  }
+  /* End Email Contact */
+
+  /* ---End Contact--- */
+
+  /* ---Start Footer--- */
+
+  /* Start Up Icon */
+  .icon-position {
+    right: 40%;
+  }
+  /* End Up Icon */
+
+  .footer-text {
+    text-align: left;
+  }
+  /* ---End Footer--- */
+}
+/* End Mobile */

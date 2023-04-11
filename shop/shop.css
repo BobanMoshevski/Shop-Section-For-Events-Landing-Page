@@ -1,0 +1,389 @@
+:root {
+  --modal-duration: 1s;
+  --modal-color: #9b9b9b;
+}
+
+/* ---Start Custom--- */
+
+/* Start Font */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  margin: 32px 0;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0a0a0a;
+}
+
+h2 {
+  margin: 16px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+
+h3 {
+  margin: 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #0a0a0a;
+}
+
+.card-heading {
+  margin: 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #606060;
+}
+/* End Font */
+
+/* Start Font Color */
+.font-color1 {
+  color: #9b9b9b;
+}
+
+.font-color2 {
+  color: #606060;
+}
+
+.font-color3 {
+  color: #0a0a0a !important;
+}
+/* End Font Color */
+
+/* Start Background Color */
+.bg-color1 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bg-color2 {
+  background-color: #faad01;
+}
+
+.bg-color3 {
+  background-color: #0a0a0a;
+  padding: 60px 0;
+}
+/* End Background Color */
+
+/* Start Shadow Hover */
+.shadow-hover:hover {
+  box-shadow: 0px 2px 20px 0 #9b9b9b;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* End Shadow Hover */
+
+/* Start Buttons */
+.basic-btn {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 10px 25px;
+  border: 2px solid #faad01;
+}
+
+.border-btn {
+  border-radius: 6px;
+}
+
+.btn-bg-color {
+  background-color: #faad01 !important;
+  color: #0a0a0a;
+}
+
+.btn-hover1:hover {
+  background-color: #ffffff !important;
+  color: #9b9b9b;
+}
+
+.btn-hover2:hover {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.btn-hover3:hover {
+  background-color: #faad01 !important;
+  text-decoration: none;
+}
+/* End Buttons */
+
+/* Start Headings */
+.heading-padding {
+  padding: 210px 0 105px 0;
+}
+
+.center-underline {
+  width: 100px;
+  height: 3px;
+  background-color: #faad01;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* End Headings */
+
+/* Start Hide & Show Content */
+.desktop-hide {
+  display: none;
+}
+/* End Hide & Show Content */
+
+/* Start go to shop */
+.icon-card {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+/* End go to shop */
+
+/* ---End Custom--- */
+
+/* ---Start Navbar--- */
+.mobile-navbar {
+  display: flex;
+  justify-content: end;
+}
+/* ---End Navbar--- */
+
+/* Start Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 20% auto;
+  width: 40%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* End Modal */
+
+/* Start Page Wrapper */
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* End Page Wrapper */
+
+/* Start Icon Card Number */
+#cardItemsNumber {
+  background-color: red;
+  margin: 9px;
+  padding: 2px;
+  border-radius: 50%;
+}
+/* End Icon Card Number */
+
+/* Start Login, Register, Icon Card Close */
+.card-close {
+  font-size: 30px;
+  cursor: pointer;
+}
+/* End Login, Register, Icon Card Close */
+
+/* Start card */
+#iconCard {
+  cursor: pointer;
+}
+/* End card */
+
+/* ---Start Tickets--- */
+.margin {
+  margin-left: 0;
+}
+
+.card-padding {
+  padding: 20px 20px;
+}
+
+.price-padding {
+  padding: 50px 0;
+}
+.form-contact-padding {
+  padding: 105px 0 210px 0;
+}
+/* ---End Tickets--- */
+
+/* ---Start Contact--- */
+.contact-modal-padding {
+  padding: 210px 0;
+}
+
+.contact-border {
+  border-right: #0a0a0a 1px solid;
+}
+/* ---End Contact--- */
+
+/* ---Start Footer--- */
+
+/* Start Up Icon */
+.position {
+  position: relative;
+}
+
+.icon-position {
+  position: absolute;
+  top: -135px;
+  right: 50%;
+}
+/* End Up Icon */
+
+/* Strat Creative Hub */
+.fotter-img-logo {
+  margin: 24px 0;
+}
+/* End Creative Hub */
+
+/* Start Copyright */
+.footer-text {
+  text-align: center;
+}
+/* End Copyright */
+
+/* ---End Footer--- */
+
+/* ---RESPONSIVE--- */
+/* Start Mobile */
+@media screen and (max-width: 426px) {
+  /* ---Start Custom--- */
+
+  /* Start Font */
+  h1 {
+    margin: 24px 0;
+    font-size: 24px;
+  }
+
+  h2 {
+    margin: 16px 0;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .card-heading {
+    font-size: 18px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+  /* End Font */
+
+  /* Start Headings */
+  .heading-padding {
+    padding: 90px 0 45px 0;
+  }
+  /* End Headings */
+
+  /* Start Hide & Show Content */
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-show {
+    display: block;
+  }
+  /* End Hide & Show Content */
+
+  /* ---End Custom--- */
+
+  /* ---Start Navbar--- */
+  .mobile-navbar {
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+  }
+  /* End Navbar */
+
+  /* ---Start Contact--- */
+
+  /* Start Email Contact */
+  .contact-border {
+    border-right: none;
+    border-bottom: #0a0a0a 1px solid;
+  }
+  /* End Email Contact */
+
+  /* ---End Contact--- */
+
+  /* ---Start Footer--- */
+
+  /* Start Up Icon */
+  .icon-position {
+    right: 40%;
+  }
+  /* End Up Icon */
+
+  .footer-text {
+    text-align: left;
+  }
+  /* ---End Footer--- */
+}
+/* End Mobile */

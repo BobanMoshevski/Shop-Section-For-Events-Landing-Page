@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Academies</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a14a5f7726.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Bootstrap 4 -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- ---Start Navbar Fixed--- -->
+      <div class="row fixed-top">
+        <div class="col-12">
+          <!-- Start Navbar Contact -->
+          <div class="row bg-color2 mobile-hide">
+            <!-- Start Phone Contact -->
+            <div class="col-lg-2 offset-lg-1 col-md-11 offset-md-1 pt-3">
+              <img
+                class="float-left mt-1 mr-3"
+                src="/img/Icons-and-buttons/Navbar/mobile-phone-navbar-web.svg"
+                alt="Mobile Navbar"
+              />
+              <p class="font-weight-bold">+389 71 214 849</p>
+            </div>
+            <!-- End Phone Contact -->
+
+            <!-- Start Location Contact -->
+            <div class="col-lg-8 offset-lg-1 col-md-11 offset-md-1 pt-3">
+              <img
+                class="float-left mt-1 mr-3"
+                src="/img/Icons-and-buttons/Navbar/location-navbar-web.svg"
+                alt="Location Navbar"
+              />
+              <p class="font-weight-bold">
+                Rajko Zinzifov br.20 1000 Skopje, Republic of Macedoina
+              </p>
+            </div>
+            <!-- End Location Contact -->
+          </div>
+          <!-- End Navbar Contact -->
+
+          <!-- Start Navbar -->
+          <div class="row bg-color1">
+            <div class="col-lg-10 offset-lg-1 col-12 offset-0">
+              <nav class="navbar navbar-expand-lg">
+                <!-- Start Desktop Logo -->
+                <a href="#top">
+                  <img
+                    class="mobile-hide"
+                    src="/img/Logos/Creative-hub-navbar-web.png"
+                    alt="Desktop Creative Hub Logo"
+                  />
+                </a>
+                <!-- End Desktop Logo -->
+
+                <!-- Start Mobile Logo -->
+                <a href="#top">
+                  <img
+                    class="desktop-hide mobile-show pr-5 mr-5"
+                    src="/img/Icons-and-buttons/Mobile-nav/CreativeHub-Amblem-logo-1.svg"
+                    alt="Mobile Creative Hub Logo"
+                  />
+                </a>
+                <!-- End Mobile Logo -->
+
+                <!-- Start Navbar Mobile Buy Btn -->
+                <a
+                  class="basic-btn border-btn nav-link btn-hover1 desktop-hide mobile-show"
+                  href="#ticket"
+                  >Buy Ticket</a
+                >
+                <!-- End Navbar Mobile Buy Btn -->
+
+                <!-- Start Mobile icon -->
+                <button
+                  class="navbar-toggler"
+                  data-toggle="collapse"
+                  data-target="#navbar"
+                >
+                  <span>
+                    <img
+                      src="/img/Icons-and-buttons/Mobile-nav/Hamburger.svg"
+                      alt="Hamburger Logo"
+                    />
+                  </span>
+                </button>
+                <!-- End Mobile icon -->
+
+                <!-- Start Links -->
+                <div class="collapse navbar-collapse mobile-navbar" id="navbar">
+                  <ul class="navbar-nav text-font2">
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Links -->
+
+                <!-- Start buy academy -->
+                <div id="addBtn" class="icon-card">
+                  <div id="iconCard" class="page-wrapper">
+                    <i class="fa-solid fa-cart-shopping fa-2x text-light"></i>
+                    <span id="cardItemsNumber"></span>
+                  </div>
+                </div>
+                <!-- End buy academy -->
+              </nav>
+            </div>
+          </div>
+          <!-- End Navbar -->
+        </div>
+      </div>
+      <!-- ---End Navbar Fixed--- -->
+
+      <!-- Start Icon Card Modal -->
+      <div id="iconCardModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="quantity"></h3>
+            <span class="card-close">
+              <i class="fa-sharp fa-solid fa-x"></i>
+            </span>
+          </div>
+          <div class="modal-body">
+            <div class="cardProducts"></div>
+            <div class="changeProducts"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End Icon Card Modal -->
+
+      <!-- ---Start Tickets--- -->
+      <!-- Start Buy Tickets Heading -->
+      <div id="ticket" class="row text-center heading-padding">
+        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
+          <h1>Buy Tickets</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelersique
+            fringilla elit a, vel. Malesuada ipsum integer consectetur
+          </p>
+          <span class="center-underline"></span>
+        </div>
+      </div>
+      <!-- End Buy Tickets Heading -->
+
+      <!-- Start Cards -->
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-md-12 offset-md-0">
+          <div id="addCards" class="row"></div>
+        </div>
+      </div>
+      <!-- End Cards -->
+      <!-- ---End Tickets--- -->
+
+      <!-- ---Start Contact--- -->
+      <!-- Start Contact Heading -->
+      <div id="contact" class="row text-center heading-padding">
+        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
+          <h1>Contact</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <span class="center-underline"></span>
+        </div>
+      </div>
+      <!-- End Contact Heading -->
+
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <!-- Start Icons Contact -->
+          <div class="row text-center">
+            <!-- Start Location Contact -->
+            <div class="col-md-4">
+              <div class="contact-border py-5">
+                <img
+                  src="/img/Icons-and-buttons/Location.svg"
+                  alt="Location Icon"
+                />
+                <h2>Address</h2>
+                <p>Rajko Zinzifov br.20 1000 Skopje, North Macedoina</p>
+              </div>
+            </div>
+            <!-- End Location Contact -->
+
+            <!-- Start Phone Contact -->
+            <div class="col-md-4">
+              <div class="contact-border py-5">
+                <img
+                  src="/img/Icons-and-buttons/phone-web.png"
+                  alt="Location Icon"
+                />
+                <h2>Phone Number</h2>
+                <p>+389 71 214 849</p>
+                <br />
+              </div>
+            </div>
+            <!-- End Phone Contact -->
+
+            <!-- Start Email Contact -->
+            <div class="col-md-4">
+              <div class="contact-border py-5">
+                <img
+                  src="/img/Icons-and-buttons/mail-web.svg"
+                  alt="Location Icon"
+                />
+                <h2>Email</h2>
+                <p>contact@creativehub.mk</p>
+                <br />
+              </div>
+            </div>
+            <!-- End Email Contact -->
+          </div>
+          <!-- End Icons Contact -->
+
+          <!-- Start Form Contact -->
+          <div class="row form-contact-padding">
+            <div class="col-md-6 col-12">
+              <form class="form-group border-bottom border-dark">
+                <input
+                  class="form-control border-0"
+                  type="text"
+                  placeholder="Your Name"
+                />
+              </form>
+            </div>
+            <div class="col-md-6 col-12">
+              <form class="form-group border-bottom border-dark">
+                <input
+                  class="form-control border-0"
+                  type="email"
+                  placeholder="Your Email"
+                />
+              </form>
+            </div>
+            <div class="col-12 pt-3 pb-5">
+              <form class="form-group border-bottom border-dark">
+                <input
+                  class="form-control border-0"
+                  type="text"
+                  placeholder="Subject"
+                />
+              </form>
+            </div>
+            <div class="col-12">
+              <form class="form-group border-bottom border-dark">
+                <input
+                  class="form-control border-0"
+                  type="text"
+                  placeholder="Message"
+                />
+              </form>
+            </div>
+            <div class="col-12">
+              <button
+                class="basic-btn border-btn btn-bg-color font-weight-bold"
+                data-toggle="modal"
+                data-target="#contact-message"
+              >
+                Send Message
+              </button>
+              <div class="modal fade" id="contact-message">
+                <div
+                  class="modal-dialog modal-dialog-centered modal-lg text-center"
+                >
+                  <div class="modal-content">
+                    <div class="modal-body contact-modal-padding">
+                      <h3>Thank you!</h3>
+                      <p>We'll get in touch as soon as possible</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Form Contact -->
+        </div>
+      </div>
+      <!-- ---End Contact--- -->
+
+      <!-- ---Start Footer--- -->
+      <div class="row bg-color3">
+        <div class="col-lg-10 offset-lg-1">
+          <!-- Start Up Icon -->
+          <div class="row">
+            <div class="col-12">
+              <div class="position">
+                <a class="text-decoration-none" href="#top">
+                  <img
+                    class="icon-position"
+                    src="/img/Icons-and-buttons/Scroll-up-web.svg"
+                    alt="Up Icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Up Icon -->
+
+          <div class="row">
+            <!-- Start Creative Hub--- -->
+            <div class="col-lg-4 col-md-6 col-12">
+              <img
+                class="fotter-img-logo"
+                src="/img/Logos/Creative-hub-navbar-web.png"
+                alt="Creative Hub Logo"
+              />
+              <p class="text-light">
+                Lorem ipsum dolor sit, amet consectetur adipiscing elit.
+                Bibendum blandit ac quis arcu ac. Tellus at ullamcorper risus
+                maecenas sed commodo nunc. Orci et nunc volutpat massa. Praesent
+                scelerisque nibh quis geugiat ultrices arcu malesuada.
+              </p>
+            </div>
+            <!-- End Creative Hub -->
+
+            <!-- Start Useful Link -->
+            <div class="col-lg-3 offset-lg-1 col-md-6 offset-md-0 col-8">
+              <h2 class="text-light">USEFUL LINKS</h2>
+              <ul class="list-unstyled">
+                <li class="border-bottom py-1">
+                  <a class="text-decoration-none text-light" href="#">Home</a>
+                </li>
+                <li class="border-bottom py-1">
+                  <a class="text-decoration-none text-light" href="#"
+                    >About us</a
+                  >
+                </li>
+                <li class="border-bottom py-1">
+                  <a class="text-decoration-none text-light" href="#"
+                    >Services</a
+                  >
+                </li>
+                <li class="border-bottom py-1">
+                  <a class="text-decoration-none text-light" href="#"
+                    >Terms of service</a
+                  >
+                </li>
+                <li class="py-1">
+                  <a class="text-decoration-none text-light" href="#"
+                    >Privacy policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- End Useful Link -->
+
+            <!-- Start Footer Contact -->
+            <div class="col-lg-3 offset-lg-1 col-md-6 offset-md-0 col-12">
+              <h2 class="text-light">Contact</h2>
+              <p class="text-light">
+                Rajko Zinzifov br.20
+                <br />
+                1000 Skopje,
+                <br />
+                North Macedoina
+                <br />
+                Phone: +389 71 214 849
+                <br />
+                Email: contact@creativehub.mk
+              </p>
+            </div>
+            <!-- End Footer Contact -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Copyright -->
+      <div class="row footer-text bg-color2">
+        <div class="col-12">
+          <p class="pt-3 mb-0">
+            &copy; Copyright CreativeHub. All Rights Reserved
+          </p>
+          <p>Designed by CreativeHub</p>
+        </div>
+      </div>
+      <!-- End Copyright -->
+      <!-- ---End Footer--- -->
+    </div>
+  </body>
+  <script type="module" src="shop.mjs"></script>
+</html>
